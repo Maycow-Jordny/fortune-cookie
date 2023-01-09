@@ -4,12 +4,8 @@ export class Cookies {
         this.root = document.querySelector(root)
         this.pageCookieClose = document.querySelector('.fortune-cookie')
         this.pageCookieOpen = document.querySelector('.opened-fortune-cookie')
-        this.loadPhrase()
-    }
-
-
-    loadPhrase() {
-        this.phrases =
+       
+            this.phrases =
             [
 
                 "A vida trará coisas boas se tiveres paciência.",
@@ -19,6 +15,12 @@ export class Cookies {
                 "O bom-senso vai mais longe do que muito conhecimento.",
 
             ]
+         this.loadPhrase()
+    }
+
+
+    loadPhrase() {
+    
         const randonPhrase = this.phrases[Math.floor(Math.random() * this.phrases.length)]
 
         document.querySelector('p').textContent = randonPhrase
